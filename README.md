@@ -1,2 +1,3 @@
-# KN-17-02-Dyachkov-Rabota.UA
-This is my kursovaya work
+В web.config и Rabotacontext поменять connectionString 
+В Package Manager вбить update database
+Юзать
