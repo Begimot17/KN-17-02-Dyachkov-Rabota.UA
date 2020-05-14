@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Kursach_Web_Dyachkov.Models.AnnouncementViewModel>
+@using Kursach_Web_Dyachkov.Dal.CodeFirst.Repository
+
+@{
+    ViewBag.Title = "Обьявления";
+    CategoryRepository categoryRepository = new CategoryRepository();
+    var categories = new SelectList(categoryRepository.GetCategories().Select(x => x.Name));
+
+}
+
+<h2>Объявления</h2>
+
+<p>
+    @Html.ActionLink("Создать новое", "Create")
+</p>
+<form method="post">
+    <div class="form-inline">
+        <label class="control-label">Категория: </label>
+        @Html.DropDownList("category", categories as SelectList,
+                    htmlAttributes: new { @class = "form-control" })
+
+        @*@Html.Label("От ", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.Editor("min", new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        @Html.Label("До ", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.Editor("max", new { htmlAttributes = new { @class = "form-control" } })
+        </div>*@
+
+        <input type="submit" value="Фильтр" class="btn btn-default" />
+    </div>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Задача")
+        </th>
+        <th>
+            @Html.Label("Категория")
+        </th>
+        <th>
+            @Html.Label("Описание")
+        </th>
+        <th>
+            @Html.Label("Зарплата")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Подробнее", "Details", new { id = item.Id }) 
+            </td>
+        </tr>
+    }
+
+</table>

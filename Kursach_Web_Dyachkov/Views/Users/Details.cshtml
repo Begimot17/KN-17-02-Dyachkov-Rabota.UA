@@ -1,0 +1,18 @@
+﻿@model Kursach_Web_Dyachkov.Models.UserViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Резюме</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dd>
+            @Html.DisplayFor(model => model.Summary)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Назад к работникам", "Index")
+</p>

@@ -1,0 +1,78 @@
+﻿@model Kursach_Web_Dyachkov.Models.UserViewModel
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<h2>Мой профиль</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Фамилия")
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Имя")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Возраст")
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Номер телефона")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Профессия")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profession.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Место проживания")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Region.Name)
+        </dd>
+        <dt>
+            @Html.DisplayName("Резюме")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Summary)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать профиль", "Edit","Users", new { id = Model.Id },null) |
+    @Html.ActionLink("На главную", "Index")
+</p>

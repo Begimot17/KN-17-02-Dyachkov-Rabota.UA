@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kursach_Web_Dyachkov", "Kursach_Web_Dyachkov\Kursach_Web_Dyachkov.csproj", "{4304354C-7C9F-47F5-9E70-BAA50D806A4F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{78797B9A-DE60-43F5-8BA5-4EBD69F7B068} = {78797B9A-DE60-43F5-8BA5-4EBD69F7B068}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kursach_Web_Dyachkov.Dal.CodeFirst", "Kursach_Web_Dyachkov.Dal.CodeFirst\Kursach_Web_Dyachkov.Dal.CodeFirst.csproj", "{78797B9A-DE60-43F5-8BA5-4EBD69F7B068}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4304354C-7C9F-47F5-9E70-BAA50D806A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4304354C-7C9F-47F5-9E70-BAA50D806A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4304354C-7C9F-47F5-9E70-BAA50D806A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4304354C-7C9F-47F5-9E70-BAA50D806A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78797B9A-DE60-43F5-8BA5-4EBD69F7B068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78797B9A-DE60-43F5-8BA5-4EBD69F7B068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78797B9A-DE60-43F5-8BA5-4EBD69F7B068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78797B9A-DE60-43F5-8BA5-4EBD69F7B068}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22CB0B28-9143-4230-ADBD-4A90CB47A974}
+	EndGlobalSection
+EndGlobal
